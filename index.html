@@ -24,6 +24,8 @@ h1 em{font:italic 400 1em var(--serif);color:var(--acc)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:30px 0 60px}
 .site{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
 .site:hover,.site:focus-visible{transform:translateY(-5px);box-shadow:0 26px 50px -30px rgba(20,22,27,.5)}
+.clients{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:30px 0 44px}
+.client img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
 .thumb{aspect-ratio:16/10;display:grid;place-items:center;position:relative;overflow:hidden}
 .thumb .t{font:700 26px/1.1 var(--head);text-align:center;padding:0 20px;position:relative}
 .t1{background:linear-gradient(170deg,#14294a,#2c4a7c);color:#fff}.t1 .t{font-family:var(--serif)}.t1 i{color:#ffb867;font-style:italic}
@@ -44,7 +46,7 @@ h1 em{font:italic 400 1em var(--serif);color:var(--acc)}
 .how b{font:700 16px var(--head);display:block}
 .how p{margin:4px 0 0;color:var(--mute);font-size:15px}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:14px}
-@media (max-width:900px){.grid,.band{grid-template-columns:1fr}.how{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.grid,.band,.clients{grid-template-columns:1fr}.how{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -57,6 +59,20 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);fo
 </header>
 
 <main class="wrap">
+  <h2 class="tag" style="margin:18px 0 0">Live client work</h2>
+  <div class="clients">
+    <a class="site client" href="https://newperspectivepaint.com/" rel="noopener">
+      <img src="img/npp.jpg" alt="Homepage of newperspectivepaint.com: New Perspective Painting logo and the headline 'A new perspective on precision painting.'" width="1200" height="750" loading="lazy">
+      <div class="body"><h2>New Perspective Painting LLC</h2><p>Interior and exterior painters serving Edgewood and Greater Baltimore. Services, a swatch studio, project-planning tools and an estimate-request flow.</p>
+        <div class="feat"><span>Custom domain</span><span>Lead capture</span><span>Light / dark mode</span></div><span class="open">newperspectivepaint.com ↗</span></div>
+    </a>
+    <a class="site client" href="https://locmein.com/" rel="noopener">
+      <img src="img/locmein.jpg" alt="Homepage of locmein.com: Loc Me In natural-hair studio in Edgewood, Maryland, with glowing purple title" width="1200" height="750" loading="lazy">
+      <div class="body"><h2>Loc Me In</h2><p>Appointment-only loc and natural-hair studio in Edgewood, MD. Style visualizer, service menu, appointment planning, hair-care guide and gallery.</p>
+        <div class="feat"><span>Custom domain</span><span>Booking flow</span><span>Local SEO</span></div><span class="open">locmein.com ↗</span></div>
+    </a>
+  </div>
+
   <h2 class="tag" style="margin:18px 0 0">Sample sites</h2>
   <div class="grid">
     <a class="site" href="harbor-light/">
@@ -89,6 +105,6 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);fo
     <div><b>4 · Launch</b><p>Domain cutover with no downtime, then 30 days of fixes included.</p></div>
   </div>
 </main>
-<footer class="wrap">Sample sites feature fictional organizations created for this portfolio. All sites are hand-built, dependency-free and load in under a second.</footer>
+<footer class="wrap">Client sites are live businesses. Sample sites feature fictional organizations created for this portfolio. All sites are hand-built, dependency-free and load in under a second.</footer>
 </body>
 </html>
