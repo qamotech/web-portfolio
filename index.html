@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qamotech — Web Design &amp; Build · Baltimore</title>
+<meta name="description" content="Website design and build for nonprofits, ministries and small businesses in the DC / Maryland / Virginia area. Sample sites and interactive work.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161b'/%3E%3Cpath d='M18 22h28M18 32h20M18 42h24' stroke='%23f08a2c' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f4f1ea;--ink:#14161b;--mute:#636774;--line:#e1dbcf;--card:#fff;--acc:#d9701f;
+  --head:"Segoe UI Variable Display","Segoe UI",system-ui,-apple-system,sans-serif;--body:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;--serif:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+header{padding:64px 0 36px}
+.tag{font:700 12px var(--head);letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+h1{font:700 clamp(38px,5.6vw,64px)/1.03 var(--head);letter-spacing:-.03em;margin:10px 0 16px;max-width:17ch}
+h1 em{font:italic 400 1em var(--serif);color:var(--acc)}
+.intro{font-size:20px;color:var(--mute);max-width:56ch;margin:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.chips span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font:600 13px var(--head)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:30px 0 60px}
+.site{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.site:hover,.site:focus-visible{transform:translateY(-5px);box-shadow:0 26px 50px -30px rgba(20,22,27,.5)}
+.thumb{aspect-ratio:16/10;display:grid;place-items:center;position:relative;overflow:hidden}
+.thumb .t{font:700 26px/1.1 var(--head);text-align:center;padding:0 20px;position:relative}
+.t1{background:linear-gradient(170deg,#14294a,#2c4a7c);color:#fff}.t1 .t{font-family:var(--serif)}.t1 i{color:#ffb867;font-style:italic}
+.t2{background:#f7f3ea;color:#17140f;border-bottom:3px double #17140f}.t2 .t{font:400 30px/1 "Didot","Bodoni MT",Georgia,serif}.t2 b{color:#b0302a;font-weight:400}
+.t3{background:linear-gradient(170deg,#2a4d3c,#4f7b63);color:#fff}
+.body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h2{margin:0;font:700 20px var(--head)}
+.body p{margin:0;color:var(--mute);font-size:15.5px}
+.feat{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+.feat span{font:600 12px var(--head);background:#f4f1ea;border-radius:6px;padding:3px 8px;color:#3d404a}
+.open{font:700 14px var(--head);color:var(--acc);margin-top:6px}
+.band{background:#14161b;color:#d9dbe0;border-radius:24px;padding:36px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;margin-bottom:60px}
+.band h2{color:#fff;font:700 28px var(--head);margin:0 0 8px}
+.band p{margin:0}
+.band a.btn{display:inline-block;background:#f08a2c;color:#1b1206;text-decoration:none;font:700 16px var(--head);padding:13px 22px;border-radius:999px}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0 70px}
+.how div{border-top:3px solid var(--ink);padding-top:12px}
+.how b{font:700 16px var(--head);display:block}
+.how p{margin:4px 0 0;color:var(--mute);font-size:15px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);font-size:14px}
+@media (max-width:900px){.grid,.band{grid-template-columns:1fr}.how{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="tag">qamotech · Baltimore, MD · serving DC / MD / VA</p>
+  <h1>Websites for organizations that <em>do good work.</em></h1>
+  <p class="intro">Independent web designer and developer. I rebuild tired sites into fast, accessible, mobile-first ones — with online donations and book or product sales built in — and I follow your content and blueprint exactly.</p>
+  <div class="chips"><span>Nonprofits &amp; ministries</span><span>Stripe &amp; PayPal</span><span>WordPress or static</span><span>WCAG accessibility</span><span>Domain &amp; DNS migration</span></div>
+</header>
+
+<main class="wrap">
+  <h2 class="tag" style="margin:18px 0 0">Sample sites</h2>
+  <div class="grid">
+    <a class="site" href="harbor-light/">
+      <div class="thumb t1"><span class="t">No neighbor should face the week <i>hungry.</i></span></div>
+      <div class="body"><h2>Harbor Light Food Pantry</h2><p>Nonprofit site with a donation impact calculator, monthly giving, a fundraising goal tracker, volunteer sign-up and FAQ.</p>
+        <div class="feat"><span>Donations</span><span>Forms</span><span>3 pages</span></div><span class="open">Open site →</span></div>
+    </a>
+    <a class="site" href="bayside-bindery/">
+      <div class="thumb t2"><span class="t">Bayside <b>Bindery</b></span></div>
+      <div class="body"><h2>Bayside Bindery</h2><p>Small-press bookstore: filterable catalog, book pages with formats and quantity, and Stripe / PayPal checkout flow.</p>
+        <div class="feat"><span>Book sales</span><span>Catalog</span><span>Schema.org</span></div><span class="open">Open site →</span></div>
+    </a>
+    <a class="site" href="grace-harbor/">
+      <div class="thumb t3"><span class="t">Come as you are.</span></div>
+      <div class="body"><h2>Grace Harbor Church</h2><p>Congregation site: first-visit guide, ministries, confidential prayer requests and designated online giving.</p>
+        <div class="feat"><span>Faith community</span><span>Giving</span><span>Prayer form</span></div><span class="open">Open site →</span></div>
+    </a>
+  </div>
+
+  <div class="band">
+    <div><h2>Interactive work</h2><p>Six single-file web apps — a gravity simulator, a drum machine, a regex workbench, a pattern studio, a habit tracker and a fantasy map generator. Built to show what custom JavaScript can do.</p></div>
+    <div><a class="btn" href="apps/">Explore the apps →</a></div>
+  </div>
+
+  <h2 class="tag" style="margin:0">How a rebuild works</h2>
+  <div class="how">
+    <div><b>1 · Blueprint</b><p>You send content and structure. I confirm page list, platform and payments.</p></div>
+    <div><b>2 · Design</b><p>A homepage and one inner page in your browser to approve within a week.</p></div>
+    <div><b>3 · Build</b><p>All pages, payments, forms, SEO, accessibility and speed checks.</p></div>
+    <div><b>4 · Launch</b><p>Domain cutover with no downtime, then 30 days of fixes included.</p></div>
+  </div>
+</main>
+<footer class="wrap">Sample sites feature fictional organizations created for this portfolio. All sites are hand-built, dependency-free and load in under a second.</footer>
+</body>
+</html>

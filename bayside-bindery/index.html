@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bayside Bindery — Independent Press, Baltimore (sample site)</title>
+<meta name="description" content="Bayside Bindery publishes short fiction, local history and poetry from the Chesapeake. Sample bookstore website with online checkout.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f7f3ea'/%3E%3Crect x='14' y='10' width='34' height='44' fill='%23b0302a'/%3E%3Crect x='14' y='10' width='5' height='44' fill='%2317140f' opacity='.35'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar">Sample website for a fictional publisher · design &amp; build by qamotech · <a href="../">see all samples</a></div>
+<header class="masthead">
+  <div class="wrap">
+    <a class="logo" href="index.html">Bayside <span>Bindery</span><small>Independent press · Baltimore</small></a>
+    <nav class="mast-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Books</a>
+      <a href="#about">About</a>
+      <a href="book.html">Featured</a>
+      <a class="cart" href="#" aria-label="Cart, 0 items">Cart <b>0</b></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <p class="kicker">New this autumn</p>
+      <h1 id="hero-title">Stories from the water's edge.</h1>
+      <p>Small-batch books from Chesapeake writers — printed in Maryland, sewn by hand, and shipped from our Fells Point workroom.</p>
+      <a class="btn" href="book.html">Read the new release →</a>
+      <a class="btn outline" href="#shelf" style="margin-left:8px">Browse the shelf</a>
+    </div>
+    <div class="hero-stack" aria-hidden="true">
+      <div class="cover c1"><span class="t">The Oyster Year</span><span class="a">M. Calloway</span></div>
+      <div class="cover c2"><span class="t">Saltwater Hymnal</span><span class="a">J. Ortega</span>
+        <svg class="motif" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="4"/><circle cx="50" cy="50" r="25" fill="none" stroke="#fff" stroke-width="4"/></svg></div>
+      <div class="cover c4"><span class="t">Rowhouse Almanac</span><span class="a">D. Whitfield</span></div>
+    </div>
+  </section>
+
+  <section id="shelf" aria-labelledby="shelf-title">
+    <p class="kicker">The shelf</p>
+    <h2 id="shelf-title">Every book we've printed</h2>
+    <div class="filters" role="group" aria-label="Filter by genre">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="fiction" aria-pressed="false">Fiction</button>
+      <button type="button" data-f="poetry" aria-pressed="false">Poetry</button>
+      <button type="button" data-f="history" aria-pressed="false">Local history</button>
+    </div>
+    <div class="shelf">
+      <a class="book" href="book.html" data-g="fiction"><div class="cover c1"><span class="t">The Oyster Year</span><span class="a">M. Calloway</span></div><h3>The Oyster Year</h3><p>Novel · 284 pp</p><span class="price">$18</span></a>
+      <a class="book" href="book.html" data-g="poetry"><div class="cover c2"><span class="t">Saltwater Hymnal</span><span class="a">J. Ortega</span></div><h3>Saltwater Hymnal</h3><p>Poems · 96 pp</p><span class="price">$14</span></a>
+      <a class="book" href="book.html" data-g="history"><div class="cover c4"><span class="t">Rowhouse Almanac</span><span class="a">D. Whitfield</span></div><h3>Rowhouse Almanac</h3><p>Local history · 212 pp</p><span class="price">$22</span></a>
+      <a class="book" href="book.html" data-g="fiction"><div class="cover c3"><span class="t">Night Ferry to Annapolis</span><span class="a">R. Abernathy</span></div><h3>Night Ferry to Annapolis</h3><p>Stories · 178 pp</p><span class="price">$16</span></a>
+      <a class="book" href="book.html" data-g="history"><div class="cover c5"><span class="t">The Canneries</span><span class="a">L. Pruitt</span></div><h3>The Canneries</h3><p>Local history · 240 pp</p><span class="price">$24</span></a>
+      <a class="book" href="book.html" data-g="poetry"><div class="cover c6"><span class="t">Brick &amp; Tide</span><span class="a">A. Nwosu</span></div><h3>Brick &amp; Tide</h3><p>Poems · 80 pp</p><span class="price">$14</span></a>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="pull">
+      <div><p class="kicker">About the press</p><h2 id="about-title">Six books a year. Every one sewn by hand.</h2></div>
+      <div>
+        <blockquote>“Bayside makes books the way the city makes crab cakes — slowly, locally, and with a little too much care.”</blockquote>
+        <cite>— a very kind fictional reviewer</cite>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Sample site — Bayside Bindery is a fictional publisher created for portfolio purposes.</span><span>Built by qamotech · Stripe &amp; PayPal checkout ready</span></div>
+</footer>
+<script>
+  // genre filter
+  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+    const f = b.dataset.f;
+    document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    document.querySelectorAll('.book').forEach(k => { k.hidden = f !== 'all' && k.dataset.g !== f; });
+  }));
+</script>
+</body>
+</html>

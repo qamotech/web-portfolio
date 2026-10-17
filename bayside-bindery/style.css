@@ -1,0 +1,114 @@
+/* Bayside Bindery — sample small-press bookstore */
+:root{
+  --paper:#f7f3ea; --paper2:#efe8da; --ink:#17140f; --mute:#6b6457; --line:#d9d0bf; --red:#b0302a; --red2:#d24a3f; --teal:#1f5c5a;
+  --display:"Didot","Bodoni MT","Bodoni 72","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --text:"Charter","Bitstream Charter","Iowan Old Style",Georgia,serif;
+  --ui:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 var(--text)}
+a{color:var(--ink)}
+a:hover{color:var(--red)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(16px,4vw,36px)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;z-index:99}
+.skip:focus{left:8px}
+.demo-bar{background:var(--ink);color:#bdb5a5;font:13px var(--ui);text-align:center;padding:7px 12px}
+.demo-bar a{color:#fff}
+.masthead{border-bottom:3px double var(--ink)}
+.masthead .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding-top:26px;padding-bottom:14px;flex-wrap:wrap}
+.logo{text-decoration:none;font:400 clamp(34px,5vw,54px)/.9 var(--display);letter-spacing:-.01em}
+.logo span{color:var(--red)}
+.logo small{display:block;font:600 11px var(--ui);letter-spacing:.3em;text-transform:uppercase;margin-top:8px;color:var(--mute)}
+.mast-nav{display:flex;gap:22px;font:600 14px var(--ui);letter-spacing:.08em;text-transform:uppercase}
+.mast-nav a{text-decoration:none}
+.mast-nav a[aria-current=page]{border-bottom:2px solid var(--red)}
+.cart{display:inline-flex;align-items:center;gap:6px}
+.cart b{background:var(--red);color:#fff;border-radius:999px;font-size:11px;padding:1px 7px}
+
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding:60px 0 50px;border-bottom:1px solid var(--line)}
+.kicker{font:700 12px var(--ui);letter-spacing:.24em;text-transform:uppercase;color:var(--red)}
+.hero h1{font:400 clamp(38px,5.6vw,68px)/1.02 var(--display);margin:10px 0 18px;letter-spacing:-.015em}
+.hero p{font-size:20px;color:var(--mute);max-width:42ch;margin:0 0 24px}
+.btn{display:inline-flex;gap:8px;align-items:center;border:0;cursor:pointer;text-decoration:none;font:700 15px var(--ui);letter-spacing:.04em;padding:14px 22px;background:var(--ink);color:var(--paper);transition:background .15s,transform .15s}
+.btn:hover{background:var(--red);color:#fff;transform:translateY(-1px)}
+.btn.outline{background:transparent;color:var(--ink);box-shadow:0 0 0 1.5px var(--ink) inset}
+.btn.outline:hover{background:var(--ink);color:var(--paper)}
+
+/* CSS-drawn book covers */
+.cover{position:relative;aspect-ratio:2/3;border-radius:2px 6px 6px 2px;padding:14% 12%;color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 6px 0 0 rgba(0,0,0,.18),inset 8px 0 10px -6px rgba(0,0,0,.35),0 18px 30px -18px rgba(0,0,0,.55);overflow:hidden}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 40%);pointer-events:none}
+.cover .t{font:400 clamp(16px,2.1vw,24px)/1.08 var(--display);position:relative;z-index:1}
+.cover .a{font:700 10px var(--ui);letter-spacing:.2em;text-transform:uppercase;opacity:.85;position:relative;z-index:1}
+.cover .motif{position:absolute;inset:auto -10% -10% auto;width:80%;opacity:.35}
+.c1{background:#1f5c5a}.c2{background:#b0302a}.c3{background:#2b2a4a}.c4{background:#c98a2b;color:#1b140a}.c5{background:#3d4d2e}.c6{background:#6b2d4f}
+.hero-stack{position:relative;height:420px}
+.hero-stack .cover{position:absolute;width:44%}
+.hero-stack .cover:nth-child(1){left:6%;top:30px;transform:rotate(-7deg)}
+.hero-stack .cover:nth-child(2){left:30%;top:0;z-index:2}
+.hero-stack .cover:nth-child(3){left:53%;top:40px;transform:rotate(6deg)}
+
+section{padding:56px 0}
+h2{font:400 clamp(28px,3.4vw,42px)/1.1 var(--display);margin:6px 0 10px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 28px;font-family:var(--ui)}
+.filters button{border:1.5px solid var(--ink);background:transparent;padding:7px 14px;font:600 13px var(--ui);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:32px 26px}
+.book{text-decoration:none;display:flex;flex-direction:column;gap:12px}
+.book .cover{transition:transform .25s}
+.book:hover .cover{transform:translateY(-6px) rotate(-1deg)}
+.book h3{font:600 19px/1.25 var(--text);margin:0}
+.book p{margin:0;font:14px var(--ui);color:var(--mute)}
+.book .price{font:700 15px var(--ui);color:var(--ink)}
+.book[hidden]{display:none}
+
+.pull{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;background:var(--paper2);padding:40px;border-top:3px double var(--ink);border-bottom:3px double var(--ink)}
+.pull blockquote{margin:0;font:italic 400 clamp(22px,2.6vw,32px)/1.35 var(--text)}
+.pull cite{display:block;margin-top:12px;font:700 13px var(--ui);letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--red)}
+
+/* book detail */
+.detail{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;padding:50px 0}
+.detail .cover{max-width:380px}
+.detail h1{font:400 clamp(34px,4.6vw,56px)/1.05 var(--display);margin:8px 0 6px}
+.byline{font:16px var(--ui);color:var(--mute);margin:0 0 20px}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.formats label{border:1.5px solid var(--line);padding:12px;cursor:pointer;display:grid;gap:2px;font:14px var(--ui);background:#fffdf8}
+.formats input{position:absolute;opacity:0;pointer-events:none}
+.formats label:has(input:checked){border-color:var(--ink);box-shadow:0 0 0 1.5px var(--ink) inset}
+.formats label:has(input:focus-visible){outline:2px solid var(--red);outline-offset:2px}
+.formats b{font:700 18px var(--ui)}
+.qty{display:flex;align-items:center;gap:0;border:1.5px solid var(--ink);width:max-content}
+.qty button{border:0;background:none;width:40px;height:44px;font:700 18px var(--ui);cursor:pointer}
+.qty output{width:40px;text-align:center;font:700 16px var(--ui)}
+.buy{display:grid;gap:10px;margin:20px 0}
+.buy .stripe{background:#635bff;color:#fff;justify-content:center}
+.buy .stripe:hover{background:#4f46e5}
+.buy .paypal{background:#ffc439;color:#111;justify-content:center}
+.buy .paypal:hover{background:#f5b700;color:#111}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font:14px var(--ui);color:var(--mute);border-top:1px solid var(--line);padding-top:16px}
+.meta dt{font-weight:700;color:var(--ink)}
+.meta dd{margin:0}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-top:30px}
+.tabs button{border:0;background:none;padding:12px 16px;font:700 13px var(--ui);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;color:var(--mute);border-bottom:2px solid transparent}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--red)}
+.tabpanel{padding:20px 0}
+.review{border-bottom:1px solid var(--line);padding:14px 0}
+.review b{font:700 14px var(--ui)}
+.stars{color:var(--red);letter-spacing:2px}
+
+dialog{border:0;padding:30px;max-width:min(460px,calc(100vw - 32px));background:var(--paper);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+dialog::backdrop{background:rgba(23,20,15,.55)}
+dialog h2{margin-top:0}
+.line{display:flex;justify-content:space-between;font:15px var(--ui);padding:8px 0;border-bottom:1px dashed var(--line)}
+
+footer{border-top:3px double var(--ink);padding:36px 0;margin-top:30px;font:14px var(--ui);color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:820px){
+  .hero,.detail,.pull{grid-template-columns:1fr}
+  .hero-stack{height:300px;max-width:420px}
+  .detail .cover{max-width:260px}
+  .mast-nav{gap:14px;font-size:12px}
+  .formats{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

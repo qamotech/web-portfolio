@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Oyster Year — Bayside Bindery (sample site)</title>
+<meta name="description" content="The Oyster Year by M. Calloway — a novel of one season on the Chesapeake. Paperback, hardcover and ebook. Sample book page with Stripe and PayPal checkout.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f7f3ea'/%3E%3Crect x='14' y='10' width='34' height='44' fill='%23b0302a'/%3E%3Crect x='14' y='10' width='5' height='44' fill='%2317140f' opacity='.35'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"The Oyster Year","author":{"@type":"Person","name":"M. Calloway"},"numberOfPages":284,"bookFormat":"https://schema.org/Paperback","offers":{"@type":"Offer","price":"18.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar">Sample website for a fictional publisher · design &amp; build by qamotech · <a href="../">see all samples</a></div>
+<header class="masthead">
+  <div class="wrap">
+    <a class="logo" href="index.html">Bayside <span>Bindery</span><small>Independent press · Baltimore</small></a>
+    <nav class="mast-nav" aria-label="Main">
+      <a href="index.html">Books</a>
+      <a href="index.html#about">About</a>
+      <a href="book.html" aria-current="page">Featured</a>
+      <a class="cart" href="#" aria-label="Cart"><span>Cart</span> <b id="cartN">0</b></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <article class="detail">
+    <div><div class="cover c1" role="img" aria-label="Cover of The Oyster Year"><span class="t" style="font-size:clamp(26px,3.4vw,40px)">The Oyster Year</span><span class="a">M. Calloway</span>
+      <svg class="motif" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 60 Q 30 20 50 50 T 90 40" fill="none" stroke="#fff" stroke-width="5"/><path d="M10 78 Q 30 38 50 68 T 90 58" fill="none" stroke="#fff" stroke-width="5"/></svg></div></div>
+    <div>
+      <p class="kicker">New release · novel</p>
+      <h1>The Oyster Year</h1>
+      <p class="byline">by M. Calloway · foreword by J. Ortega</p>
+      <p>One season on a Tilghman Island workboat: a widowed captain, her estranged son, and the year the oyster beds came back. A quiet, salt-stung novel about what a small town owes the people who keep it running.</p>
+
+      <form id="buy" aria-label="Choose format and buy">
+        <fieldset style="border:0;padding:0;margin:0"><legend class="kicker" style="margin-top:12px">Format</legend>
+          <div class="formats">
+            <label><input type="radio" name="fmt" value="Paperback" data-price="18" checked><span>Paperback</span><b>$18</b></label>
+            <label><input type="radio" name="fmt" value="Hardcover, sewn" data-price="32"><span>Hardcover, sewn</span><b>$32</b></label>
+            <label><input type="radio" name="fmt" value="Ebook (EPUB)" data-price="9"><span>Ebook (EPUB)</span><b>$9</b></label>
+          </div>
+        </fieldset>
+        <div style="display:flex;gap:16px;align-items:center;font:14px var(--ui)"><span class="kicker" style="margin:0">Qty</span>
+          <div class="qty"><button type="button" data-q="-1" aria-label="Decrease quantity">−</button><output id="qty" aria-live="polite">1</output><button type="button" data-q="1" aria-label="Increase quantity">+</button></div>
+          <span>Total <b id="total" style="color:var(--ink)">$18</b></span>
+        </div>
+        <div class="buy">
+          <button class="btn stripe" type="button" data-pay="Stripe">Buy now — card, Apple Pay, Google Pay</button>
+          <button class="btn paypal" type="button" data-pay="PayPal">Pay with PayPal</button>
+        </div>
+      </form>
+      <dl class="meta">
+        <dt>Pages</dt><dd>284</dd><dt>Ships</dt><dd>2–4 business days, media mail from Baltimore</dd><dt>Printed</dt><dd>Hagerstown, MD on recycled stock</dd><dt>ISBN</dt><dd>000-0-00000-000-0 (sample)</dd>
+      </dl>
+
+      <div class="tabs" role="tablist" aria-label="Book details">
+        <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Excerpt</button>
+        <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Reviews</button>
+        <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Author</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p1" aria-labelledby="t1"><p>The river did not care that Ruth was tired. It came in grey at five, the way it always had, and lifted the <i>Margaret Ann</i> off the mud like a hand under a sleeping child…</p></div>
+      <div class="tabpanel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+        <div class="review"><span class="stars" aria-label="5 out of 5">★★★★★</span> <b>Sample reader</b><p>Read it in one sitting on the light rail. Felt like I could smell the bay.</p></div>
+        <div class="review"><span class="stars" aria-label="4 out of 5">★★★★☆</span> <b>Sample reader</b><p>Gorgeous object — the sewn hardcover lies perfectly flat.</p></div>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p3" aria-labelledby="t3" hidden><p>M. Calloway is a fictional author who grew up on a crab boat and now teaches writing in Dundalk.</p></div>
+    </div>
+  </article>
+</main>
+
+<dialog id="checkout" aria-labelledby="co-title">
+  <h2 id="co-title">Checkout preview</h2>
+  <div class="line"><span id="co-item"></span><b id="co-sub"></b></div>
+  <div class="line"><span>Shipping (media mail)</span><b id="co-ship"></b></div>
+  <div class="line" style="border-bottom:0"><span><b>Total</b></span><b id="co-total"></b></div>
+  <p style="font:14px var(--ui);color:var(--mute)">On a live site this opens a hosted <b id="co-prov"></b> checkout. Card data never touches this website, and the order email goes to the publisher automatically. <b>Portfolio demo — no charge.</b></p>
+  <form method="dialog"><button class="btn" style="width:100%;justify-content:center">Close preview</button></form>
+</dialog>
+
+<footer>
+  <div class="wrap"><span>Sample site — Bayside Bindery is a fictional publisher created for portfolio purposes.</span><span>Built by qamotech · Stripe &amp; PayPal checkout ready</span></div>
+</footer>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  let qty = 1;
+  const fmt = () => document.querySelector('input[name=fmt]:checked');
+  const total = () => +fmt().dataset.price * qty;
+  const render = () => { $('#qty').textContent = qty; $('#total').textContent = '$' + total(); };
+  document.querySelectorAll('input[name=fmt]').forEach(r => r.addEventListener('change', render));
+  document.querySelectorAll('[data-q]').forEach(b => b.addEventListener('click', () => { qty = Math.min(20, Math.max(1, qty + +b.dataset.q)); render(); }));
+  document.querySelectorAll('[data-pay]').forEach(b => b.addEventListener('click', () => {
+    const ebook = fmt().value.startsWith('Ebook'), ship = ebook ? 0 : 4 + (qty - 1) * 1;
+    $('#co-item').textContent = `${qty} × The Oyster Year (${fmt().value})`;
+    $('#co-sub').textContent = '$' + total(); $('#co-ship').textContent = ebook ? 'Instant download' : '$' + ship;
+    $('#co-total').textContent = '$' + (total() + ship); $('#co-prov').textContent = b.dataset.pay;
+    $('#cartN').textContent = qty; $('#checkout').showModal();
+  }));
+  // accessible tabs (arrow keys move between tabs)
+  const tabs = [...document.querySelectorAll('[role=tab]')];
+  const show = t => { tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; }); t.focus(); };
+  tabs.forEach((t, i) => { t.addEventListener('click', () => show(t)); t.addEventListener('keydown', e => { const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (d) show(tabs[(i + d + tabs.length) % tabs.length]); }); });
+  render();
+})();
+</script>
+</body>
+</html>

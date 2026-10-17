@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grace Harbor Community Church — Baltimore (sample site)</title>
+<meta name="description" content="Grace Harbor is a welcoming community church in Baltimore. Sunday worship at 9 & 11 am, ministries for every age, online giving and prayer requests. Sample website.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23355e4a'/%3E%3Crect x='29' y='12' width='6' height='40' rx='2' fill='%23e8c37a'/%3E%3Crect x='18' y='22' width='28' height='6' rx='2' fill='%23e8c37a'/%3E%3C/svg%3E">
+<style>
+:root{--sage:#355e4a;--sage2:#4d7a63;--gold:#c9a24e;--gold2:#e8c37a;--bone:#f6f3ec;--ink:#1f2622;--mute:#5f6a63;--line:#e2ddd1;
+  --head:"Segoe UI Variable Display","Segoe UI",system-ui,-apple-system,sans-serif;--body:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,sans-serif;--serif:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--ink);font:17px/1.65 var(--body)}
+a{color:var(--sage)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sage);color:#fff;padding:8px 14px;border-radius:8px;z-index:99}.skip:focus{left:8px}
+.demo-bar{background:#1f2622;color:#b9c2bc;font-size:13px;text-align:center;padding:7px 12px}.demo-bar a{color:var(--gold2)}
+header.top{position:absolute;left:0;right:0;z-index:5;color:#fff}
+header.top .wrap{display:flex;align-items:center;gap:18px;min-height:76px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:650 18px var(--head);letter-spacing:.01em}
+.brand svg{flex:none}
+header.top nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+header.top nav a{color:#fff;text-decoration:none;font:600 15px var(--head);padding:8px 12px;border-radius:999px}
+header.top nav a:hover{background:rgba(255,255,255,.14)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font:700 16px var(--head);padding:13px 24px;border-radius:999px;background:var(--gold2);color:#2a2112;transition:transform .15s,background .15s}
+.btn:hover{background:#f2d396;transform:translateY(-1px);color:#2a2112}
+.btn.line{background:transparent;color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.8) inset}
+.btn.line:hover{background:#fff;color:var(--sage)}
+.btn.dark{background:var(--sage);color:#fff}.btn.dark:hover{background:var(--sage2);color:#fff}
+.hero{position:relative;min-height:min(92vh,760px);display:grid;align-items:end;color:#fff;background:radial-gradient(ellipse at 70% 20%,#e8c37a55,transparent 50%),linear-gradient(170deg,#2a4d3c 0%,#355e4a 45%,#4f7b63 100%);overflow:hidden}
+.hero svg.scene{position:absolute;inset:auto 0 0 0;width:100%;height:auto}
+.hero .wrap{position:relative;z-index:2;padding-top:140px;padding-bottom:clamp(120px,18vw,210px)}
+.hero h1{font:700 clamp(40px,6.4vw,76px)/1.02 var(--head);letter-spacing:-.025em;margin:0 0 18px;max-width:14ch}
+.hero p{font-size:clamp(18px,1.8vw,21px);max-width:44ch;color:#e6efe9;margin:0 0 28px}
+.times{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.times span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font:600 14px var(--head)}
+section{padding:80px 0}
+.eyebrow{font:700 12px var(--head);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h2{font:700 clamp(30px,3.6vw,44px)/1.1 var(--head);letter-spacing:-.02em;margin:8px 0 14px}
+.lead{color:var(--mute);font-size:19px;max-width:58ch}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;position:relative}
+.step b{position:absolute;top:22px;right:24px;font:700 40px var(--head);color:#ece6d6}
+.step h3{margin:0 0 6px;font:700 21px var(--head)}
+.step p{margin:0;color:var(--mute)}
+.verse{background:var(--sage);color:#fff;text-align:center}
+.verse blockquote{font:italic 400 clamp(24px,3vw,36px)/1.4 var(--serif);max-width:28ch;margin:0 auto}
+.verse cite{display:block;margin-top:14px;font:700 13px var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);font-style:normal}
+.min-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.min{border-radius:18px;padding:22px;color:#fff;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end}
+.min h3{margin:0;font:700 20px var(--head)}.min p{margin:4px 0 0;font-size:15px;opacity:.9}
+.m1{background:#4d7a63}.m2{background:#8a6a2f}.m3{background:#3e5f78}.m4{background:#6d4b5f}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
+label{display:grid;gap:6px;font:600 15px var(--head);margin-bottom:12px}
+input,textarea,select{font:16px var(--body);padding:12px 14px;border:1.5px solid #d6d0c2;border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(53,94,74,.15)}
+.check{display:flex;gap:10px;align-items:flex-start;font:400 15px var(--body);color:var(--mute)}
+.check input{margin-top:4px;accent-color:var(--sage)}
+.ok{background:#e9f2ec;color:#244a36;border-radius:14px;padding:16px;font-weight:600}
+.give-amts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.give-amts button{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px;font:700 18px var(--head);cursor:pointer;color:var(--ink)}
+.give-amts button[aria-pressed=true]{border-color:var(--sage);background:#eef4f0}
+.visit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.visit div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.visit h3{margin:0 0 4px;font:700 18px var(--head)}.visit p{margin:0;color:var(--mute);font-size:15px}
+footer{background:#1f2622;color:#b9c2bc;padding:44px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+dialog{border:0;border-radius:22px;padding:28px;max-width:min(420px,calc(100vw - 32px));box-shadow:0 30px 80px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(31,38,34,.55)}
+@media (max-width:860px){.steps,.min-grid,.two,.visit{grid-template-columns:1fr}.min-grid{grid-template-columns:1fr 1fr}header.top nav{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar">Sample website for a fictional congregation · design &amp; build by qamotech · <a href="../">see all samples</a></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#main"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="none" stroke="#e8c37a" stroke-width="3"/><rect x="29" y="14" width="6" height="36" rx="2" fill="#e8c37a"/><rect x="19" y="24" width="26" height="6" rx="2" fill="#e8c37a"/></svg>Grace Harbor Church</a>
+    <nav aria-label="Main"><a href="#visit">Plan a visit</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#give">Give</a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title" style="padding:0">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--gold2)">Canton · Baltimore</p>
+      <h1 id="hero-title">Come as you are. Leave a little lighter.</h1>
+      <p>A small, welcoming church by the harbor. Honest teaching, real community, and coffee that's better than it needs to be.</p>
+      <div class="times" aria-label="Service times"><span>Sundays 9:00 &amp; 11:00 am</span><span>Wednesday prayer 7 pm</span><span>Livestream every service</span></div>
+      <a class="btn" href="#visit">Plan your first visit</a> <a class="btn line" href="#prayer" style="margin-left:6px">Request prayer</a>
+    </div>
+    <svg class="scene" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <path d="M0 170 C 240 120 420 200 720 150 S 1200 110 1440 160 V260 H0Z" fill="#2a4d3c" opacity=".55"/>
+      <g fill="#1f3a2d"><rect x="980" y="70" width="70" height="120"/><polygon points="980,70 1015,30 1050,70"/><rect x="1011" y="0" width="8" height="40"/><rect x="1003" y="12" width="24" height="7"/><rect x="900" y="110" width="80" height="80"/><polygon points="900,110 940,80 980,110"/></g>
+      <rect x="1006" y="110" width="18" height="30" rx="9" fill="#e8c37a" opacity=".9"/>
+      <path d="M0 200 C 300 180 520 230 820 205 S 1250 185 1440 210 V260 H0Z" fill="#f6f3ec"/>
+    </svg>
+  </section>
+
+  <section id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <p class="eyebrow">New here?</p>
+      <h2 id="visit-title">Your first Sunday, step by step</h2>
+      <p class="lead">No dress code, no pressure, no one will make you stand up and introduce yourself.</p>
+      <div class="steps">
+        <div class="step"><b>1</b><h3>Park &amp; arrive</h3><p>Free lot on Boston St. Greeters at the door can walk you to the kids' check-in.</p></div>
+        <div class="step"><b>2</b><h3>Worship together</h3><p>About 70 minutes: music, a message from Scripture, and communion on the first Sunday.</p></div>
+        <div class="step"><b>3</b><h3>Stay for coffee</h3><p>Meet a pastor at the Welcome Table. We'd love to learn your name.</p></div>
+      </div>
+      <div class="visit">
+        <div><h3>Address</h3><p>2800 Boston St (fictional)<br>Baltimore, MD 21224</p></div>
+        <div><h3>Kids &amp; youth</h3><p>Nursery to 5th grade during both services. Youth group Wednesdays.</p></div>
+        <div><h3>Accessibility</h3><p>Step-free entrance, hearing loop, large-print bulletins on request.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="verse" aria-label="Verse of the week">
+    <div class="wrap"><blockquote>“Come to me, all you who are weary and burdened, and I will give you rest.”</blockquote><cite>Matthew 11:28</cite></div>
+  </section>
+
+  <section id="ministries" aria-labelledby="min-title">
+    <div class="wrap">
+      <p class="eyebrow">Ministries</p>
+      <h2 id="min-title">There's a place for you here</h2>
+      <div class="min-grid">
+        <div class="min m1"><h3>Small Groups</h3><p>Weeknight groups across the city</p></div>
+        <div class="min m2"><h3>Food Ministry</h3><p>Saturday meals with neighbors</p></div>
+        <div class="min m3"><h3>Recovery</h3><p>Thursday support circle</p></div>
+        <div class="min m4"><h3>Outreach</h3><p>Visiting hospitals &amp; care homes</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap two">
+      <div id="prayer" class="panel" aria-labelledby="pr-title">
+        <p class="eyebrow">Prayer</p>
+        <h2 id="pr-title" style="font-size:30px">How can we pray for you?</h2>
+        <form id="prForm" novalidate>
+          <label for="pname">Your first name (optional)<input id="pname" autocomplete="given-name"></label>
+          <label for="preq">Prayer request<textarea id="preq" rows="4" required aria-describedby="preqErr"></textarea><span id="preqErr" style="color:#a3261d;font-size:13px"></span></label>
+          <label class="check"><input type="checkbox" id="pconf" checked> Keep this confidential — only our pastoral team will see it.</label>
+          <button class="btn dark" type="submit">Send request</button>
+        </form>
+        <div id="prOk" class="ok" hidden tabindex="-1">Thank you. Our prayer team will lift this up this week. (Demo — nothing was sent.)</div>
+      </div>
+      <div id="give" class="panel" aria-labelledby="give-title">
+        <p class="eyebrow">Give</p>
+        <h2 id="give-title" style="font-size:30px">Generosity, made simple</h2>
+        <p style="color:var(--mute);margin:0">Give securely online. Gifts fund the food ministry, outreach and keeping our doors open.</p>
+        <div class="give-amts" role="group" aria-label="Gift amount"><button type="button" aria-pressed="false">$25</button><button type="button" aria-pressed="true">$50</button><button type="button" aria-pressed="false">$100</button></div>
+        <label for="fund">Designate to<select id="fund"><option>Where most needed</option><option>Food Ministry</option><option>Outreach</option><option>Building fund</option></select></label>
+        <button class="btn dark" id="giveBtn" type="button" style="width:100%;justify-content:center">Give $50</button>
+        <p style="font-size:13px;color:var(--mute);margin:10px 0 0">Secure checkout by Stripe · tax receipt by email · also accepts PayPal</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="giveDlg" aria-labelledby="gd-title">
+  <h2 id="gd-title" style="font-size:24px;margin-top:0">Giving preview</h2>
+  <p id="gdText" style="color:var(--mute)"></p>
+  <p style="font-size:13px;color:var(--mute)">On a live site this opens a hosted Stripe or PayPal page. Portfolio demo — no charge.</p>
+  <form method="dialog"><button class="btn dark" style="width:100%;justify-content:center">Close</button></form>
+</dialog>
+
+<footer><div class="wrap"><span>Sample site — Grace Harbor is a fictional congregation created for portfolio purposes.</span><span>Built by qamotech · accessible, fast, mobile-first</span></div></footer>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  let amt = 50;
+  document.querySelectorAll('.give-amts button').forEach(b => b.addEventListener('click', () => {
+    amt = +b.textContent.replace('$', ''); document.querySelectorAll('.give-amts button').forEach(x => x.setAttribute('aria-pressed', x === b)); $('#giveBtn').textContent = 'Give $' + amt;
+  }));
+  $('#giveBtn').addEventListener('click', () => { $('#gdText').textContent = `$${amt} to “${$('#fund').value}”.`; $('#giveDlg').showModal(); });
+  $('#prForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const t = $('#preq');
+    if (!t.value.trim()) { $('#preqErr').textContent = 'Please share a few words so we know how to pray.'; t.setAttribute('aria-invalid', 'true'); t.focus(); return; }
+    $('#prForm').hidden = true; $('#prOk').hidden = false; $('#prOk').focus();
+  });
+})();
+</script>
+</body>
+</html>
